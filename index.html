@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webword · guess the web term</title>
+  <meta name="description" content="A small word-guessing game with web development terms. Teaching example for CM-501 Frontend Web Development.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#guess">Skip to the guess field</a>
+
+  <header class="site-header">
+    <h1>Webword</h1>
+    <p class="tagline">Guess the web term in six tries.</p>
+    <nav aria-label="Game">
+      <ul>
+        <li><button type="button" id="help-open" aria-haspopup="dialog">How to play</button></li>
+        <li><button type="button" id="mode-toggle">Practice mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p id="mode-info" class="mode-info">Daily word</p>
+
+    <!-- The board: six guesses of five letters. Each row also carries its result as text. -->
+    <ol class="board" id="board" aria-label="Your guesses"></ol>
+
+    <!-- The form is the accessible way to play: works with every keyboard and screen reader. -->
+    <form id="guess-form" class="guess-form" novalidate>
+      <label for="guess">Your guess (5 letters)</label>
+      <div class="guess-row">
+        <input id="guess" name="guess" type="text" autocomplete="off"
+               autocapitalize="characters" spellcheck="false" maxlength="5"
+               aria-describedby="guess-hint">
+        <button type="submit">Guess</button>
+      </div>
+      <p id="guess-hint" class="hint">Letters A–Z, then press Enter.</p>
+    </form>
+
+    <!-- Live region: exists from the start, so screen readers announce changes. -->
+    <p id="status" class="status" role="status"></p>
+
+    <div class="keyboard" id="keyboard" role="group" aria-label="On-screen keyboard"></div>
+
+    <section id="result" class="result" aria-labelledby="result-heading" hidden>
+      <h2 id="result-heading" tabindex="-1">Result</h2>
+      <p id="result-text"></p>
+      <p class="term"><strong id="result-word"></strong>: <span id="result-hint"></span></p>
+      <h3>Your statistics</h3>
+      <dl class="stats">
+        <div><dt>Played</dt><dd id="stat-played">0</dd></div>
+        <div><dt>Won</dt><dd id="stat-won">0</dd></div>
+        <div><dt>Current streak</dt><dd id="stat-streak">0</dd></div>
+      </dl>
+      <button type="button" id="play-again">Play a practice word</button>
+    </section>
+  </main>
+
+  <dialog id="help" aria-labelledby="help-heading">
+    <h2 id="help-heading">How to play</h2>
+    <p>Guess a five-letter term from web development in six tries. After each guess every letter gets a mark:</p>
+    <ul class="legend">
+      <li><span class="tile" data-state="correct">F</span> <strong>correct:</strong> right letter, right place</li>
+      <li><span class="tile" data-state="present">E</span> <strong>elsewhere:</strong> in the word, but in another place</li>
+      <li><span class="tile" data-state="absent">X</span> <strong>not in the word</strong></li>
+    </ul>
+    <p>The marks use a symbol and a pattern, not only colour. After the game you learn what the term means.</p>
+    <form method="dialog"><button type="submit">Close</button></form>
+  </dialog>
+
+  <footer class="site-footer">
+    <p><small>Webword is a teaching example for CM-501 Frontend Web Development (MUDT), inspired by the many word-guessing games. Word list: <em>an-array-of-english-words</em> (MIT licence).</small></p>
+  </footer>
+</body>
+</html>
