@@ -1,6 +1,6 @@
 # Webword · the course's running game example
 
-A small word-guessing game with **five-letter web development terms** (FETCH, ASIDE, LABEL …). It is the second running example of CM-501 next to the Campus Café: the café is a *content site* (HTML, accessibility, layout), Webword is an *app* (state, events, data, tests).
+A small word-guessing game with **five-letter web development terms** (FETCH, ASIDE, LABEL …). It is the second running example of SE-501 next to the Campus Café: the café is a *content site* (HTML, accessibility, layout), Webword is an *app* (state, events, data, tests).
 
 **Live:** https://sr-mudt.github.io/webword/ · **Repository:** https://github.com/sr-mudt/webword
 
