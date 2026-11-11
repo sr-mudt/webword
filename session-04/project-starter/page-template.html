@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Template for every further page. Copy it as page2.html, page3.html, page4.html
+     (better: meaningful names such as events.html, about.html, contact.html,
+     and update the links in the navigation of ALL pages). -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TODO page · TODO site name</title>
+  <meta name="description" content="TODO: what this page offers.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- The only CSS before EPA 3: touch targets of at least 24 × 24 px (WCAG 2.2, 2.5.8),
+       because unstyled links in a vertical list are too small and too close together. -->
+  <style>nav a, summary { display: inline-block; min-height: 24px; padding-block: 4px; }</style>
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p><a href="index.html">TODO site name</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <!-- move aria-current="page" to the link of THIS page -->
+        <li><a href="page2.html" aria-current="page">TODO page 2</a></li>
+        <li><a href="page3.html">TODO page 3</a></li>
+        <li><a href="page4.html">TODO page 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>TODO page heading</h1>
+    <p>TODO. A stub page needs at least this heading and one real sentence, so no link is broken.</p>
+
+    <!-- M9: if this is your form page: see the form block in the Session 4 cheat sheet
+    <form action="#" method="post">
+      <label for="name">Name (required)</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+      …
+      <button type="submit">TODO: say what happens, e.g. Send request</button>
+    </form>
+    -->
+  </main>
+
+  <footer>
+    <address>
+      TODO name · <a href="mailto:TODO@example.org">TODO@example.org</a>
+    </address>
+  </footer>
+</body>
+</html>

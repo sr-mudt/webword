@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses · Isartal Climbing Club</title>
+  <meta name="description" content="Beginners' bouldering, rope climbing and kids' courses at the Isartal Climbing Club, with dates, prices and a free trial session.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- The only CSS before EPA 3: touch targets of at least 24 × 24 px (WCAG 2.2, 2.5.8),
+       because unstyled links in a vertical list are too small and too close together. -->
+  <style>nav a, summary { display: inline-block; min-height: 24px; padding-block: 4px; }</style>
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p><a href="index.html">Isartal Climbing Club</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" aria-current="page">Courses</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Courses</h1>
+    <p>All courses take place at our wall. Shoes and harnesses are included.</p>
+
+    <!-- O2: a real data table: caption + header cells with scope -->
+    <table>
+      <caption>Courses in winter 2026/27</caption>
+      <thead>
+        <tr>
+          <th scope="col">Course</th>
+          <th scope="col">Day and time</th>
+          <th scope="col">Sessions</th>
+          <th scope="col">Price (members / guests)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" id="beginners">Bouldering for beginners</th>
+          <td>Saturday 10:00–13:00</td>
+          <td>2</td>
+          <td>€ 20 / € 45</td>
+        </tr>
+        <tr>
+          <th scope="row">Rope climbing basics</th>
+          <td>Tuesday 18:00–20:00</td>
+          <td>4</td>
+          <td>€ 40 / € 95</td>
+        </tr>
+        <tr>
+          <th scope="row">Kids' club (8–12 years)</th>
+          <td>Friday 16:00–17:30</td>
+          <td>10</td>
+          <td>€ 60 / –</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <!-- O3: native disclosure, keyboard and screen reader support included -->
+      <details>
+        <summary>Do I need any experience?</summary>
+        <p>No. The beginners' course starts with how to fall safely.</p>
+      </details>
+      <details>
+        <summary>What should I bring?</summary>
+        <p>Sports clothes and something to drink. We lend shoes and harnesses.</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="trial">
+      <h2 id="trial">Book a free trial session</h2>
+      <!-- M9: an accessible form (same pattern as Lab F) -->
+      <form action="#" method="post">
+        <p>Fields marked (required) must be filled in.</p>
+
+        <label for="name">Name (required)</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">E-mail (required)</label>
+        <p id="email-hint">We send the confirmation and the address to this e-mail.</p>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint">
+
+        <label for="date">Preferred date</label>
+        <input id="date" name="date" type="date">
+
+        <fieldset>
+          <legend>What would you like to try? (required)</legend>
+          <input type="radio" id="t-boulder" name="type" value="boulder" required>
+          <label for="t-boulder">Bouldering</label>
+          <input type="radio" id="t-rope" name="type" value="rope">
+          <label for="t-rope">Rope climbing</label>
+        </fieldset>
+
+        <input type="checkbox" id="privacy" name="privacy" required>
+        <label for="privacy">I have read the <a href="about.html#privacy">privacy notice</a>. (required)</label>
+
+        <button type="submit">Request my trial session</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      Isartal Climbing Club e.&nbsp;V. (fictional) ·
+      <a href="mailto:hello@isartal-climbing.example">hello@isartal-climbing.example</a>
+    </address>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Example of an HTML baseline (Session 4, Lab G) for a FICTIONAL project.
+     Unstyled on purpose: layout and design follow in EPA 3. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · Isartal Climbing Club</title>
+  <meta name="description" content="Bouldering and rope climbing for beginners and regulars in the Isar valley: courses, open sessions and our club wall.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- The only CSS before EPA 3: touch targets of at least 24 × 24 px (WCAG 2.2, 2.5.8),
+       because unstyled links in a vertical list are too small and too close together. -->
+  <style>nav a, summary { display: inline-block; min-height: 24px; padding-block: 4px; }</style>
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p><a href="index.html">Isartal Climbing Club</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Climbing in the Isar valley, for everyone</h1>
+    <p>We are a small, volunteer-run club with our own climbing wall. Beginners are welcome: borrow shoes and a harness, and a trainer shows you the ropes.</p>
+
+    <!-- O1: responsive image; the browser picks the file that fits the screen -->
+    <img src="img/hero-1280.jpg"
+         srcset="img/hero-640.jpg 640w, img/hero-1280.jpg 1280w"
+         sizes="100vw"
+         alt="" width="1280" height="720">
+    <!-- alt="" because the mountain silhouette is decoration: it adds no information -->
+
+    <p><a href="courses.html#trial">Book a free trial session</a></p>
+
+    <section aria-labelledby="dates-heading">
+      <h2 id="dates-heading">Next dates</h2>
+      <ul>
+        <li>
+          <article>
+            <h3>Bouldering for beginners</h3>
+            <p><time datetime="2026-11-21T10:00">Saturday, 21 November 2026, 10:00</time> · 3 hours</p>
+            <p>Your first steps on the wall, no experience needed. <a href="courses.html#beginners">Details of the beginners' course</a></p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Club evening: route setting</h3>
+            <p><time datetime="2026-12-03T19:00">Thursday, 3 December 2026, 19:00</time></p>
+            <p>We screw new routes onto the wall. Bring a drill if you have one.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Open sessions</h2>
+      <!-- O4: name–value pairs -->
+      <dl>
+        <dt>Tuesday and Thursday</dt>
+        <dd><time datetime="18:00">18:00</time> to <time datetime="22:00">22:00</time></dd>
+        <dt>Sunday</dt>
+        <dd><time datetime="10:00">10:00</time> to <time datetime="14:00">14:00</time></dd>
+      </dl>
+    </section>
+
+    <figure>
+      <img src="img/wall.jpg" alt="Our climbing wall: three overhanging panels, about seven metres high" width="800" height="600" loading="lazy">
+      <figcaption>The club wall in the old gym hall (<span lang="de">Alte Turnhalle</span>), built by members in 2019.</figcaption>
+    </figure>
+
+    <blockquote>
+      <p>I came for one trial session and stayed for five years.</p>
+    </blockquote>
+    <p>Mira, member since 2021 (fictional quote)</p>
+  </main>
+
+  <footer>
+    <address>
+      Isartal Climbing Club e.&nbsp;V. (fictional)<br>
+      Alte Turnhalle, Flussweg 3, 82000 Isarau<br>
+      <a href="tel:+4980001234567">+49 8000 123 45 67</a> ·
+      <a href="mailto:hello@isartal-climbing.example">hello@isartal-climbing.example</a>
+    </address>
+    <!-- O6: icon-only link: the link gets the name, the icon is hidden -->
+    <p>
+      <a href="https://example.org/isartal-climbing" aria-label="Isartal Climbing Club on our photo blog">
+        <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 6l1.5-2h5L16 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+    </p>
+    <p><small>© 2026 Isartal Climbing Club · example project for SE-501</small></p>
+  </footer>
+</body>
+</html>

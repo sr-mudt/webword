@@ -1,0 +1,53 @@
+/* Webword board · Session 5, Lab I bonus
+   Tokens and the tile states are given. YOUR WORK: the four layout blocks marked TODO. */
+
+:root {
+  --color-text: #1f2430; --color-bg: #f7f5f0; --color-surface: #ffffff; --color-border: #7d8290;
+  --tile-correct-bg: #1d4ed8; --tile-correct-text: #ffffff;
+  --tile-present-bg: #ffffff; --tile-present-text: #9a3412; --tile-present-border: #c2410c;
+  --tile-absent-bg: #e4e2dd;  --tile-absent-text: #4a4f5a;
+  --space-1: .25rem; --space-2: .5rem; --space-3: 1rem;
+  --radius: .5rem;
+  --tile-size: clamp(2.6rem, 14vw, 3.6rem);   /* fluid: smaller on phones */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--color-text); background: var(--color-bg); }
+main { max-width: 34rem; margin-inline: auto; padding: var(--space-3); }
+h1 { text-align: center; }
+button { font: inherit; min-height: 2.75rem; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.tile {
+  border: 2px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface);
+  font-family: ui-monospace, monospace; font-weight: 700; font-size: calc(var(--tile-size) * .45);
+}
+.tile[data-state="correct"] { background: var(--tile-correct-bg); color: var(--tile-correct-text); border-color: var(--tile-correct-bg); }
+.tile[data-state="present"] { background: var(--tile-present-bg); color: var(--tile-present-text); border: 3px dashed var(--tile-present-border); }
+.tile[data-state="absent"]  { background: var(--tile-absent-bg); color: var(--tile-absent-text); border-color: transparent; text-decoration: line-through; }
+.key-row button[data-state="correct"] { background: var(--tile-correct-bg); color: var(--tile-correct-text); }
+.key-row button[data-state="present"] { color: var(--tile-present-text); border: 2px dashed var(--tile-present-border); }
+.key-row button[data-state="absent"]  { background: var(--tile-absent-bg); color: var(--tile-absent-text); text-decoration: line-through; }
+
+/* TODO 1 · the board: remove the list style, stack the six rows with a gap, centre them (Grid) */
+.board {
+}
+
+/* TODO 2 · a row: five columns of exactly --tile-size, with a gap (Grid, repeat()) */
+.row {
+}
+
+/* TODO 3 · a tile: square (aspect-ratio), letter centred (Grid: place-items) */
+.tile {
+}
+
+/* TODO 4 · the keyboard rows: keys side by side, centred, all keys grow equally
+   but never wider than 2.75rem; "Guess" and "Delete" a bit wider (Flexbox: flex: 1 1 0) */
+.key-row {
+}
+.key-row button {
+}
+.key-row button.wide {
+}
+
+/* Test: 320 px, 768 px, 1280 px. No horizontal scrolling? Keyboard fits at 320 px? */

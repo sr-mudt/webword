@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Lab F · Form surgery. This booking form is built badly ON PURPOSE.
+     Repair it so that it works with keyboard and screen reader. Keep the look roughly the same. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 40rem; color: #222; line-height: 1.5; }
+  .title { font-size: 1.8rem; font-weight: 700; margin-bottom: .25rem; }
+  .row { margin: 1rem 0; }
+  input, select, textarea { font: inherit; padding: .4rem; border: 1px solid #ddd; width: 100%; box-sizing: border-box; color: #999; }
+  input[type=radio], input[type=checkbox] { width: auto; }
+  ::placeholder { color: #ccc; }
+  .star { color: red; }
+  .help { display: inline-block; width: 1.2rem; text-align: center; border-radius: 50%; background: #3b2a20; color: #fff; cursor: help; font-size: .8rem; }
+  .send { display: inline-block; background: #3b2a20; color: #fff; padding: .6rem 1.4rem; cursor: pointer; }
+  .error { color: red; font-size: .8rem; }
+  *:focus { outline: none; }
+</style>
+</head>
+<body>
+<div class="title">Latte Art Workshop</div>
+<div>Thursday, 3 December 2026 · 17:00 · max. 8 participants</div>
+
+<form action="https://campus-cafe.example/book" method="post">
+  <div class="row"><input type="text" name="name" placeholder="Name *"></div>
+
+  <div class="row">
+    <input type="text" name="email" placeholder="E-mail *" autocomplete="off">
+    <span class="help" title="We send the confirmation to this address">?</span>
+  </div>
+
+  <div class="row"><input type="text" name="phone" placeholder="Phone"></div>
+
+  <div class="row">
+    <select name="people">
+      <option>1</option><option>2</option><option>3</option>
+    </select>
+  </div>
+
+  <div class="row">
+    How should we contact you? <span class="star">*</span><br>
+    <input type="radio" name="contact" value="email"> E-mail
+    <input type="radio" name="contact2" value="phone"> Phone
+  </div>
+
+  <div class="row">
+    Milk:<br>
+    <input type="checkbox" name="milk" value="cow"> Cow's milk<br>
+    <input type="checkbox" name="milk" value="oat"> Oat milk<br>
+    <input type="checkbox" name="milk" value="soy"> Soy milk
+  </div>
+
+  <div class="row"><textarea name="msg" placeholder="Message"></textarea></div>
+
+  <div class="row">
+    <input type="checkbox" name="privacy"> I accept the privacy policy <a href="#">here</a> <span class="star">*</span>
+  </div>
+
+  <div class="error">Invalid input!</div>
+  <div class="send" onclick="this.closest('form').submit()">BOOK</div>
+</form>
+</body>
+</html>

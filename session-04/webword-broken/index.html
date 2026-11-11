@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Webword, BROKEN on purpose (Session 4 homework).
+     This is how many word games on the web are built. It works with a mouse,
+     but not with a keyboard, a screen reader or without colour vision.
+     Your job: repair it. Do not look at the live version until you are done. -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="title">WEBWORD</div>
+    <span class="help-icon" onclick="openHelp()" title="Help">?</span>
+  </div>
+
+  <div class="board" aria-label="board">
+      <div class="row"><div class="tile correct">P</div><div class="tile correct">R</div><div class="tile correct">O</div><div class="tile absent">P</div><div class="tile absent">S</div></div>
+      <div class="row"><div class="tile present">R</div><div class="tile present">O</div><div class="tile absent">U</div><div class="tile absent">T</div><div class="tile absent">E</div></div>
+      <div class="row"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+      <div class="row"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+      <div class="row"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+      <div class="row"><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </div>
+
+  <div class="entry">
+    <input id="guess" placeholder="Type guess" autocomplete="off">
+    <div class="go" role="button" onclick="press('Enter')">GO</div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <div class="keyboard">
+      <div class="key-row"><div class="key" onclick="press('Q')">Q</div><div class="key" onclick="press('W')">W</div><div class="key absent" onclick="press('E')">E</div><div class="key correct" onclick="press('R')">R</div><div class="key absent" onclick="press('T')">T</div><div class="key" onclick="press('Y')">Y</div><div class="key absent" onclick="press('U')">U</div><div class="key" onclick="press('I')">I</div><div class="key correct" onclick="press('O')">O</div><div class="key correct" onclick="press('P')">P</div></div>
+      <div class="key-row"><div class="key" onclick="press('A')">A</div><div class="key absent" onclick="press('S')">S</div><div class="key" onclick="press('D')">D</div><div class="key" onclick="press('F')">F</div><div class="key" onclick="press('G')">G</div><div class="key" onclick="press('H')">H</div><div class="key" onclick="press('J')">J</div><div class="key" onclick="press('K')">K</div><div class="key" onclick="press('L')">L</div></div>
+      <div class="key-row"><div class="key wide" onclick="press('Enter')">ENTER</div><div class="key" onclick="press('Z')">Z</div><div class="key" onclick="press('X')">X</div><div class="key" onclick="press('C')">C</div><div class="key" onclick="press('V')">V</div><div class="key" onclick="press('B')">B</div><div class="key" onclick="press('N')">N</div><div class="key" onclick="press('M')">M</div><div class="key wide" onclick="press('Back')">⌫</div></div>
+  </div>
+
+  <div id="help" class="popup">
+    <span class="close" onclick="closeHelp()">×</span>
+    <div class="popup-title">How to play</div>
+    <p>Guess the web term in six tries. Blue = right place. Orange = wrong place. Grey = not in the word.</p>
+  </div>
+
+  <script src="broken.js"></script>
+</body>
+</html>

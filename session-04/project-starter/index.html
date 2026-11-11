@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- HTML baseline starter · SE-501 Session 4, Lab G
+     Copy this folder into your project repository. Replace every TODO.
+     Checklist: README.md (section "HTML baseline"). -->
+<html lang="en"><!-- TODO: language of YOUR content (en, de …) -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- M1: unique title per page, pattern "Page · Site" -->
+  <title>Home · TODO site name</title>
+  <!-- M1: one or two sentences that would make someone click in a search result -->
+  <meta name="description" content="TODO: what this site offers, for whom.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- The only CSS before EPA 3: touch targets of at least 24 × 24 px (WCAG 2.2, 2.5.8),
+       because unstyled links in a vertical list are too small and too close together. -->
+  <style>nav a, summary { display: inline-block; min-height: 24px; padding-block: 4px; }</style>
+  <!-- Otherwise no CSS yet on purpose: layout and design come in EPA 3 (Sessions 5 and 6). -->
+</head>
+<body>
+  <!-- M2: skip link = first focusable element -->
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <!-- the site name links to the home page -->
+    <p><a href="index.html">TODO site name</a></p>
+
+    <!-- M3: the same navigation on every page; aria-current on the current page -->
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="page2.html">TODO page 2</a></li>
+        <li><a href="page3.html">TODO page 3</a></li>
+        <li><a href="page4.html">TODO page 4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- M4: exactly one h1, then h2, h3 … without gaps -->
+    <h1>TODO: what is this site about?</h1>
+    <p>TODO: one or two sentences for your audience. Real text, no lorem ipsum.</p>
+
+    <!-- M5: alt says what the image MEANS here (or alt="" if purely decorative);
+         width/height = the real pixel size of the file -->
+    <!-- <img src="img/TODO.jpg" alt="TODO" width="1280" height="720"> -->
+
+    <section aria-labelledby="news-heading">
+      <h2 id="news-heading">TODO: e.g. Upcoming events / Latest news / What we offer</h2>
+      <!-- M6: a list of things is a <ul>/<ol>; each item can be an <article> if it stands alone -->
+      <ul>
+        <li>
+          <article>
+            <h3>TODO title</h3>
+            <!-- M8: machine-readable date -->
+            <p><time datetime="2026-12-05">5 December 2026</time></p>
+            <p>TODO short text. <a href="page2.html">TODO: a link text that makes sense on its own</a></p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- M5: one figure with a caption (photo, chart, illustration …) -->
+    <!--
+    <figure>
+      <img src="img/TODO.jpg" alt="TODO" width="800" height="600" loading="lazy">
+      <figcaption>TODO caption</figcaption>
+    </figure>
+    -->
+  </main>
+
+  <footer>
+    <!-- M7: contact data as text and real links -->
+    <address>
+      TODO name<br>
+      TODO street, TODO postal code and city<br>
+      <a href="tel:+49000000000">TODO phone as written</a> ·
+      <a href="mailto:TODO@example.org">TODO@example.org</a>
+    </address>
+    <p><small>© 2026 TODO</small></p>
+  </footer>
+</body>
+</html>

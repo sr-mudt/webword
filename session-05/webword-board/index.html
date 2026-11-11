@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Session 5 · Lab I bonus: the Webword board. Static HTML (the game logic follows in EPA 4).
+     Your task is in style.css: lay out the board with Grid and the keyboard with Flexbox. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Board · Webword</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Webword</h1>
+    <ol class="board" aria-label="Your guesses">
+      <li class="row">
+        <span class="visually-hidden">Guess 1, PROPS: P correct, R correct, O correct, P not in the word, S not in the word.</span>
+        <span class="tile" data-state="correct" aria-hidden="true">P</span><span class="tile" data-state="correct" aria-hidden="true">R</span><span class="tile" data-state="correct" aria-hidden="true">O</span><span class="tile" data-state="absent" aria-hidden="true">P</span><span class="tile" data-state="absent" aria-hidden="true">S</span>
+      </li>
+      <li class="row">
+        <span class="visually-hidden">Guess 2, ROUTE: R elsewhere, O elsewhere, U not in the word, T not in the word, E not in the word.</span>
+        <span class="tile" data-state="present" aria-hidden="true">R</span><span class="tile" data-state="present" aria-hidden="true">O</span><span class="tile" data-state="absent" aria-hidden="true">U</span><span class="tile" data-state="absent" aria-hidden="true">T</span><span class="tile" data-state="absent" aria-hidden="true">E</span>
+      </li>
+      <li class="row">
+        <span class="visually-hidden">Guess 3: empty</span>
+        <span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span>
+      </li>
+      <li class="row">
+        <span class="visually-hidden">Guess 4: empty</span>
+        <span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span>
+      </li>
+      <li class="row">
+        <span class="visually-hidden">Guess 5: empty</span>
+        <span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span>
+      </li>
+      <li class="row">
+        <span class="visually-hidden">Guess 6: empty</span>
+        <span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span><span class="tile" aria-hidden="true"></span>
+      </li>
+    </ol>
+
+    <div class="keyboard" role="group" aria-label="On-screen keyboard">
+      <div class="key-row"><button type="button">Q</button><button type="button">W</button><button type="button" data-state="absent" aria-label="E, not in the word">E</button><button type="button" data-state="correct" aria-label="R, correct">R</button><button type="button" data-state="absent" aria-label="T, not in the word">T</button><button type="button">Y</button><button type="button" data-state="absent" aria-label="U, not in the word">U</button><button type="button">I</button><button type="button" data-state="correct" aria-label="O, correct">O</button><button type="button" data-state="correct" aria-label="P, correct">P</button></div>
+      <div class="key-row"><button type="button">A</button><button type="button" data-state="absent" aria-label="S, not in the word">S</button><button type="button">D</button><button type="button">F</button><button type="button">G</button><button type="button">H</button><button type="button">J</button><button type="button">K</button><button type="button">L</button></div>
+      <div class="key-row"><button type="button" class="wide">Guess</button><button type="button">Z</button><button type="button">X</button><button type="button">C</button><button type="button">V</button><button type="button">B</button><button type="button">N</button><button type="button">M</button><button type="button" class="wide">Delete</button></div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Lab D · Div-soup surgery. Make this page semantic WITHOUT changing what it looks like much.
+     Rule: no new CSS classes needed; you may rename the selectors in <style> if you change elements. -->
+<html>
+<head>
+<meta charset="utf-8" lang="en">
+<title>page</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; color: #222; line-height: 1.5; }
+  .header { background: #3b2a20; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-size: 1.6rem; font-weight: 700; }
+  .menu span { color: #fff; margin-left: 1rem; cursor: pointer; text-decoration: underline; }
+  .content { display: flex; gap: 2rem; padding: 2rem; }
+  .events { flex: 3; }
+  .side { flex: 1; background: #f4ede4; padding: 1rem; }
+  .big { font-size: 2rem; font-weight: 700; margin: 0 0 1rem; }
+  .medium { font-size: 1.3rem; font-weight: 700; margin: 0; }
+  .event { border-bottom: 1px solid #ccc; padding: 1rem 0; }
+  .date { color: #6b4a36; font-weight: 700; }
+  .btn { display: inline-block; background: #3b2a20; color: #fff; padding: .4rem 1rem; cursor: pointer; margin-top: .5rem; }
+  .row { display: flex; justify-content: space-between; border-bottom: 1px dotted #aaa; }
+  .footer { background: #3b2a20; color: #fff; padding: 1rem 2rem; font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">Campus Café</div>
+  <div class="menu">
+    <span onclick="location.href='index.html'">Home</span>
+    <span onclick="location.href='menu.html'">Menu</span>
+    <span onclick="location.href='events.html'">Events</span>
+    <span onclick="location.href='contact.html'">Contact</span>
+  </div>
+</div>
+
+<div class="content">
+  <div class="events">
+    <div class="big">Events</div>
+    <div>Three evenings this term. Entry is free, seats are limited.</div>
+
+    <div class="event">
+      <div class="medium">Open Mic Night</div>
+      <div class="date">Thursday, 5 November 2026 · 19:00</div>
+      <div>Music, poetry, comedy: five minutes on stage for everyone who signs up.</div>
+      <div class="btn" onclick="location.href='contact.html'">Reserve a seat</div>
+    </div>
+
+    <div class="event">
+      <div class="medium">Exam Study Marathon</div>
+      <div class="date">Thursday, 19 November 2026 · 8:00 – 22:00</div>
+      <div>Long opening hours, quiet zones, and free coffee refills for students.</div>
+      <div class="btn" onclick="location.href='contact.html'">Reserve a seat</div>
+    </div>
+
+    <div class="event">
+      <div class="medium">Latte Art Workshop</div>
+      <div class="date">Thursday, 3 December 2026 · 17:00</div>
+      <div>Learn to pour a heart, a tulip, and a rosetta. Max. 8 participants.</div>
+      <div class="btn" onclick="location.href='contact.html'">Reserve a seat</div>
+    </div>
+  </div>
+
+  <div class="side">
+    <div class="medium">Opening hours</div>
+    <div class="row"><span>Monday – Friday</span><span>7:30 – 19:00</span></div>
+    <div class="row"><span>Saturday</span><span>9:00 – 16:00</span></div>
+    <div class="row"><span>Sunday</span><span>closed</span></div>
+    <br>
+    <div class="medium">Find us</div>
+    <div>Example Street 1<br>80000 Munich<br>+49 89 000 000 00</div>
+  </div>
+</div>
+
+<div class="footer">© 2026 Campus Café · <span onclick="location.href='imprint.html'">Imprint</span> · <span onclick="location.href='privacy.html'">Privacy</span></div>
+</body>
+</html>

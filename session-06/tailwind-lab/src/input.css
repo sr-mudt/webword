@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* Design tokens → Tailwind utilities.
+   --color-bean-900 becomes bg-bean-900, text-bean-900, border-bean-900 …
+   --font-display becomes font-display, --radius-card becomes rounded-card. */
+@theme {
+  --color-bean-900: #3b2a20;
+  --color-bean-700: #6b4a36;
+  --color-cream-50: #fbf7f2;
+  --color-cream-200: #f1e7dc;
+  --color-ember-600: #b5562b;
+  --font-display: Georgia, "Times New Roman", serif;
+  --radius-card: 0.75rem;
+}
